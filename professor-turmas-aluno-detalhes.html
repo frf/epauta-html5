@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>E-Chamada Aluno</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <script src="js/aluno-avaliacao.js"></script>
+    <script src="js/professor-aluno-frequencia.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">E-Chamada Professor</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ><a  href="professor-home.html">Principal</a></li>
+                <li><a href="professor-lista-alunos.html">Alunos</a></li>
+                <li   class="active"><a href="professor-turmas.html">Turmas</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="professor-meus-dados.html">Meus Dados</a></li>
+                <li><a href="professor-login.html">Sair</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="breadcrumb">
+                <li><a href="professor-home.html">Principal</a></li>
+                <li><a href="professor-turmas-detalhes.html">Turma (2016.2)</a></li>
+                <li class="active">Aluno: Pedro Rocha</li>
+            </ul>
+            <h4>Avaliação</h4>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <tbody id="listaAvaliacao"></tbody>
+                </table>
+            </div>
+            <h4>Frequência</h4>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <th>Mês/Ano</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th></th>
+                    </thead>
+                    <tbody id="listaFrequencia"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>getListaAvaliacao();</script>
+<script>getListaFrequencia();</script>
+
+</body>
+</html>
